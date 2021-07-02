@@ -18,4 +18,9 @@ urlpatterns = [
     path("", hello.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
+    path('user/', include('authentication.urls')),
+    path('order/', include('order.urls')),
+    path('author/', include('author.urls')),
+    path('book/', include('book.urls')),
+    path('api/v1/', include('gettingstarted.api_urls')),
 ]
